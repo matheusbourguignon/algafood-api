@@ -1,13 +1,17 @@
 package com.algaworks.algafood.notification;
 
 import com.algaworks.algafood.user.Cliente;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 //implements é uma palavra-chave em Java que estabelece uma relação de implementação entre uma classe e uma interface.
 
-//@Primary
 /* O meu notificador email é o meu principal a maior prioridade é pra ele. */
+//@Primary
+
+//Qualifier - é uma implementação para qualificar o nosso componente.
+@Qualifier("urgente")
 @Component
 public class NotificadorEmail implements Notificador {
 
