@@ -13,6 +13,16 @@ public class AtivacaoClienteService {
     @Autowired
     private Notificador notificador;
 
+    //    @PostConstruct
+    public void init() {
+        System.out.println(" INIT " + notificador);
+    }
+
+    //    @PreDestroy
+    public void destroy() {
+        System.out.println("DESTROY");
+    }
+
     public void ativar(Cliente cliente) {
         cliente.ativar();
 

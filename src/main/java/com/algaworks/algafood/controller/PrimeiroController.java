@@ -8,14 +8,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@Controller
+//@Controller
 public class PrimeiroController {
 
     private AtivacaoClienteService ativacaoClienteService;
 
     public PrimeiroController(AtivacaoClienteService ativacaoClienteService) {
         this.ativacaoClienteService = ativacaoClienteService;
-        System.out.println("MeuPrimeiroController" + ativacaoClienteService);
+//        System.out.println("MeuPrimeiroController" + ativacaoClienteService);
     }
 
     @GetMapping("/hello")
