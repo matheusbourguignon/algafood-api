@@ -1,4 +1,4 @@
-package com.algaworks.algafood.consultation;
+package com.algaworks.algafood.alter;
 
 import com.algaworks.algafood.AlgafoodApiApplication;
 import com.algaworks.algafood.entity.Cozinha;
@@ -7,7 +7,7 @@ import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 
-public class InclusaoCozinhaMain {
+public class AlteracaoCozinhaMain {
 
     public static void main(String[] args) {
         ApplicationContext applicationContext = new SpringApplicationBuilder(AlgafoodApiApplication.class)
@@ -15,18 +15,13 @@ public class InclusaoCozinhaMain {
 
         CadastroCozinha cadastroCozinha = applicationContext.getBean(CadastroCozinha.class);
 
-        Cozinha cozinha1 = new Cozinha();
-        cozinha1.setName("Tailandesa");
+        Cozinha cozinha = new Cozinha();
+        cozinha.setId(1L);
+        cozinha.setName("Brasileira");
+
+        cadastroCozinha.salvar(cozinha);
 
 
-        Cozinha cozinha2 = new Cozinha();
-        cozinha2.setName("Japonesa");
-
-        cozinha1 = cadastroCozinha.salvar(cozinha1);
-        cozinha2 = cadastroCozinha.salvar(cozinha2);
-
-        System.out.printf("%d - %s/n", cozinha1.getId(), cozinha1.getName());
-        System.out.printf("%d - %s/n", cozinha2.getId(), cozinha2.getName());
     }
 
 
