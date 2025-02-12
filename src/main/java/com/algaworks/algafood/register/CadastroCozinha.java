@@ -6,6 +6,7 @@ import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.imageio.ImageReader;
 import java.util.List;
 
 @Component
@@ -26,4 +27,9 @@ public class CadastroCozinha {
         return manager.merge(cozinha);
     }
 
+    @Transactional
+    public void remover(Cozinha cozinha) {
+        cozinha = buscar(cozinha.getId());
+        manager.remove(cozinha);
+    }
 }
