@@ -1,6 +1,5 @@
 package com.algaworks.algafood.repository;
 
-import com.algaworks.algafood.entity.Cozinha;
 import com.algaworks.algafood.entity.Restaurante;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -16,7 +15,7 @@ public class RestauranteRepositorylmpl implements RestauranteRepository {
     private EntityManager manager;
 
     @Override
-    public List<Restaurante> todas() {
+    public List<Restaurante> listar() {
         return manager.createQuery("from Restaurante ", Restaurante.class).getResultList();
     }
 

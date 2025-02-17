@@ -5,7 +5,7 @@ import com.algaworks.algafood.entity.Restaurante;
 import java.util.List;
 
 public interface RestauranteRepository {
-    List<Restaurante> todas();
+    List<Restaurante> listar();
 
     Restaurante porId(Long id);
 
