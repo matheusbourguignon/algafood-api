@@ -1,2 +1,1 @@
-insert into cozinha (name) values ('Tailandesa');
-insert into cozinha (name) values ('Japonesa');
+insert into restaurante (id, name, taxa_frete) values (2, 'Bobs', 50.00);
