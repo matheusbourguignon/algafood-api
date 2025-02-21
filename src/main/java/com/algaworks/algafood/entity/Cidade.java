@@ -7,17 +7,16 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Cozinha {
-
-    @EqualsAndHashCode.Include
+public class Cidade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)
     private String name;
-    
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private Estado estado;
+
 }
-
-
-
