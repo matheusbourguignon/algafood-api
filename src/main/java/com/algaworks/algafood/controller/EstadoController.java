@@ -1,24 +1,24 @@
 package com.algaworks.algafood.controller;
 
-import com.algaworks.algafood.entity.Cozinha;
-import com.algaworks.algafood.repository.CozinhaRepository;
+import com.algaworks.algafood.entity.Estado;
+import com.algaworks.algafood.repository.EstadoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 import java.util.List;
 
 @RestController
-@RequestMapping("/cozinhas")
-public class CozinhaController {
+@RequestMapping("estados")
+public class EstadoController {
 
     @Autowired
-    private CozinhaRepository cozinhaRepository;
+    private EstadoRepository estadoRepository;
 
     @GetMapping
-    public List<Cozinha> listar() {
-        return cozinhaRepository.listar();
+    public List<Estado> listar(){
+       return estadoRepository.listar();
     }
+
 }
