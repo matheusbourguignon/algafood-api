@@ -1,7 +1,5 @@
 package com.algaworks.algafood.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -17,8 +15,6 @@ public class Cozinha {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
- /*   @JsonIgnore*/
-     @JsonProperty("name")
     @Column(nullable = false)
     private String name;
 
