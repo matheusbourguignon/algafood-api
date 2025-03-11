@@ -20,7 +20,7 @@ public class ConsultaCozinhaMain {
         List<Cozinha> todasCozinhas = cozinhas.listar();
 
         for (Cozinha cozinha : todasCozinhas) {
-            System.out.println(cozinha.getName());
+            System.out.println(cozinha.getNome());
         }
 
     }

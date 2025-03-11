@@ -21,7 +21,7 @@ public class ConsultaCidadeMain {
         List<Cidade> todasCidades = restauranteRepository.listar();
 
         for (Cidade cidade : todasCidades) {
-            PrintStream printf = System.out.printf("%s - %s\n", cidade.getName(), cidade.getEstado(), cidade.getEstado().getName());
+            PrintStream printf = System.out.printf("%s - %s\n", cidade.getNome(), cidade.getEstado(), cidade.getEstado().getNome());
         }
 
     }

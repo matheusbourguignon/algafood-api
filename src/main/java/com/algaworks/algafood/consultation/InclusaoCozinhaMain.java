@@ -16,17 +16,17 @@ public class InclusaoCozinhaMain {
         CozinhaRepository cozinhaRepository = applicationContext.getBean(CozinhaRepository.class);
 
         Cozinha cozinha1 = new Cozinha();
-        cozinha1.setName("Tailandesa");
+        cozinha1.setNome("Tailandesa");
 
 
         Cozinha cozinha2 = new Cozinha();
-        cozinha2.setName("Japonesa");
+        cozinha2.setNome("Japonesa");
 
         cozinha1 = cozinhaRepository.adicionar(cozinha1);
         cozinha2 = cozinhaRepository.adicionar(cozinha2);
 
-        System.out.printf("%d - %s/n", cozinha1.getId(), cozinha1.getName());
-        System.out.printf("%d - %s/n", cozinha2.getId(), cozinha2.getName());
+        System.out.printf("%d - %s/n", cozinha1.getId(), cozinha1.getNome());
+        System.out.printf("%d - %s/n", cozinha2.getId(), cozinha2.getNome());
     }
 
 

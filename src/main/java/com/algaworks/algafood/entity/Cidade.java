@@ -13,7 +13,7 @@ public class Cidade {
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String nome;
 
     @ManyToOne
     @JoinColumn(nullable = false)
