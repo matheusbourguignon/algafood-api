@@ -9,6 +9,8 @@ public interface RestauranteRepository {
 
     Restaurante porId(Long id);
 
+    Restaurante buscar(Long id);
+
     Restaurante taxaFrete(Restaurante restaurante);
 
     Restaurante adicionar(Restaurante restaurante);

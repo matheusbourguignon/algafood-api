@@ -24,6 +24,11 @@ public class RestauranteRepositorylmpl implements RestauranteRepository {
         return manager.find(Restaurante.class, id);
     }
 
+    @Override
+    public Restaurante buscar(Long id) {
+        return manager.find(Restaurante.class, id);
+    }
+
     @Transactional
     @Override
     public Restaurante adicionar(Restaurante restaurante) {
