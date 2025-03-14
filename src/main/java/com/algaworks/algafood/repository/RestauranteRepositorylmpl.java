@@ -31,7 +31,7 @@ public class RestauranteRepositorylmpl implements RestauranteRepository {
 
     @Transactional
     @Override
-    public Restaurante adicionar(Restaurante restaurante) {
+    public Restaurante salvar(Restaurante restaurante) {
         return manager.merge(restaurante);
     }
 

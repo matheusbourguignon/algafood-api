@@ -13,7 +13,7 @@ public interface RestauranteRepository {
 
     Restaurante taxaFrete(Restaurante restaurante);
 
-    Restaurante adicionar(Restaurante restaurante);
+    Restaurante salvar(Restaurante restaurante);
 
     void remover(Restaurante restaurante);
 
