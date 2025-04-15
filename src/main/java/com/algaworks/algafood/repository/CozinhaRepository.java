@@ -5,11 +5,16 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 // eu declaro a interface cozinhaRepository e uso a herança extends do JpaRepositoryu
 public interface CozinhaRepository extends JpaRepository<Cozinha, Long> {
 
-    //    List<Cozinha> consultarPornome(String nome);
+    //
+    List<Cozinha> findByNome(String nome);
+
+    Optional<Cozinha> findTodasByNome(String nome);
+
 
 }
