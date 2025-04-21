@@ -12,9 +12,10 @@ import java.util.Optional;
 public interface CozinhaRepository extends JpaRepository<Cozinha, Long> {
 
     //
-    List<Cozinha> findByNomeContaining(String nome);
+    List<Cozinha> findTodasByNomeContaining(String nome);
 
-    Optional<Cozinha> findTodasByNome(String nome);
+    Optional<Cozinha> findByNome(String nome);
 
+    boolean existsByNome(String nome);
 
 }
