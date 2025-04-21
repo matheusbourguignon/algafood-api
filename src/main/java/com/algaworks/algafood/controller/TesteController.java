@@ -43,7 +43,7 @@ public class TesteController {
 
     @GetMapping("/restaurantes/por-nome")
     public List<Restaurante> restaurantePorTaxaFrete(String nome, Long id) {
-        return restauranteRepository.findByNomeContainingAndId(nome, id);
+        return restauranteRepository.consultarPorNome(nome, id);
     }
 
     @GetMapping("/restaurantes/primeiro-por-nome")
