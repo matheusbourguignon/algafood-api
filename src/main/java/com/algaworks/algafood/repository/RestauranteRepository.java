@@ -1,5 +1,6 @@
 package com.algaworks.algafood.repository;
 
+import com.algaworks.algafood.entity.Cozinha;
 import com.algaworks.algafood.entity.Restaurante;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -13,7 +14,6 @@ public interface RestauranteRepository extends JpaRepository<Restaurante, Long> 
     List<Restaurante> queryByTaxaFreteBetween(BigDecimal taxaInicial, BigDecimal taxaFinal);
 
     //  Anotação - @Query("from Restaurante where nome like %:nome% and id= :id")
-    @Query("from Restaurante where nome like %:nome% and id= :id")
     List<Restaurante> consultarPorNome(String nome, @Param("id") Long id);
 
     //    List<Restaurante> findByNomeContainingAndId(String nome, Long id);
